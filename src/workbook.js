@@ -1,7 +1,9 @@
-import * as XLSX from 'sheetjs';
+import * as XLSX from 'xlsx';
+
 //takes an object and uses its info. 
 const createBook = (events) => {
     //create workbook
+    console.log('working')
     const wb = XLSX.utils.book_new();
     wb.SheetNames.push("Test Sheet");
     let ws_data = [['Edit','Event','Venue','Event Date','EventTime','Quantity','Section','Row','SeatFrom','SeatThru','Notes','Cost','TicketID','EDelivery','InHandDate','Instant','SplitValue','StockType','Spec']];

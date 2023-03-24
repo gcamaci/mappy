@@ -1,14 +1,12 @@
 {
-  "dependencies": {
-    "sheetjs": "^2.0.0"
-  },
   "name": "mappy",
   "description": "Chrome Extension where user can highlight URL and create bulk productions from ticketmaster API",
   "version": "1.0.0",
   "main": "index.js",
-  "devDependencies": {},
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
@@ -20,5 +18,12 @@
   "bugs": {
     "url": "https://github.com/gcamaci/mappy/issues"
   },
-  "homepage": "https://github.com/gcamaci/mappy#readme"
+  "homepage": "https://github.com/gcamaci/mappy#readme",
+  "devDependencies": {
+    "webpack": "^5.76.3",
+    "webpack-cli": "^5.0.1"
+  },
+  "dependencies": {
+    "xlsx": "https://cdn.sheetjs.com/xlsx-0.19.2/xlsx-0.19.2.tgz"
+  }
 }

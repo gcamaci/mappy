@@ -5,9 +5,6 @@ const fetchEvents = async (keyword) => {
       const code = data._embedded.attractions[0].id
       const eventResponse = await fetch(`https://app.ticketmaster.com/discovery/v2/events.json?attractionId=${code}&apikey=mmsBfHd9j3ILnRlZ21Q1GxO06NY8IVJk`,{mode:'cors'});
       const eventData = await eventResponse.json();
-      console.log(data)
-      console.log(eventData)
-      console.log(formatEvents(eventData._embedded.events))
       return {
         name: data._embedded.attractions[0].name,
         id_code: data._embedded.attractions[0].id,

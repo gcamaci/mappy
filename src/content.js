@@ -1,14 +1,14 @@
-import { fetchEvents } from "./fetchData.js";
-import { createBook } from "./workbook.js";
-
+import { fetchEvents } from "./fetchData";
+import { createBook } from "./workbook";
 const setListener = () => {
     const event_code = document.getElementById('event_code');
     const submit_btn = document.getElementById('submit_btn');
 
-    submit_btn.addEventListener('click',(e) => {
+    submit_btn.addEventListener('click', async (e) => {
         e.preventDefault()
-        const events = fetchEvents(event_code.value)
-        createBook()
+        const shows = await fetchEvents(event_code.value)
+        createBook(shows)
+
     })
 
 }
