@@ -1,4 +1,5 @@
 import { fetchEvents } from "./fetchData.js";
+import { createBook } from "./workbook.js";
 
 const setListener = () => {
     const event_code = document.getElementById('event_code');
@@ -6,7 +7,8 @@ const setListener = () => {
 
     submit_btn.addEventListener('click',(e) => {
         e.preventDefault()
-        fetchEvents(event_code.value)
+        const events = fetchEvents(event_code.value)
+        createBook()
     })
 
 }
